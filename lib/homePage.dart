@@ -6,23 +6,15 @@ import 'package:tenovatersadmin/userForm/user_text_form_field.dart';
 import 'package:tenovatersadmin/userForm/validator.dart';
 import 'package:tenovatersadmin/widgets/headerWidget.dart';
 
-import 'models/Enquiry.dart';
-
 import 'dart:developer' as dev;
+
+import 'get_query.dart';
 
 class HomePage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
 
   final _signInKey = GlobalKey<FormState>();
-
-  Future<List<dynamic>> getQuery() async {
-    try {
-      return await Amplify.DataStore.query(Enquiry.classType);
-    } catch (e) {
-      print('Query failed: $e');
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -54,9 +46,7 @@ class HomePage extends StatelessWidget {
               .push(MaterialPageRoute(builder: (BuildContext context) {
             return Container(
                 height: MediaQuery.of(context).size.height * .3,
-                child: QueryListView(
-                  getQuery: getQuery,
-                ));
+                child: QueryListView());
           }));
         }
       } on UserNotFoundException catch (e) {

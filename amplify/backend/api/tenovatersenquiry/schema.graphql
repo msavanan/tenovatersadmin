@@ -1,0 +1,8 @@
+type Enquiry @model @auth(rules: [{allow: public}]) {
+  id: ID!
+  date: AWSDateTime!
+  email: String!
+  subject: String!
+  message: String!
+}
+ 

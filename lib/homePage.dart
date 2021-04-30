@@ -1,3 +1,5 @@
+import 'dart:developer' as dev;
+
 import 'package:amplify_auth_cognito/amplify_auth_cognito.dart';
 import 'package:amplify_flutter/amplify.dart';
 import 'package:flutter/material.dart';
@@ -5,10 +7,6 @@ import 'package:tenovatersadmin/query_list_view.dart';
 import 'package:tenovatersadmin/userForm/user_text_form_field.dart';
 import 'package:tenovatersadmin/userForm/validator.dart';
 import 'package:tenovatersadmin/widgets/headerWidget.dart';
-
-import 'dart:developer' as dev;
-
-import 'get_query.dart';
 
 class HomePage extends StatelessWidget {
   final TextEditingController _emailController = TextEditingController();

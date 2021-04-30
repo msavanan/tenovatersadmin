@@ -4,12 +4,10 @@ import 'package:amplify_datastore/amplify_datastore.dart';
 import 'package:amplify_flutter/amplify.dart';
 import 'package:flutter/material.dart';
 import 'package:tenovatersadmin/constants.dart';
-import 'package:tenovatersadmin/get_query.dart';
 import 'package:tenovatersadmin/homePage.dart';
 import 'package:tenovatersadmin/query_list_view.dart';
 
 import 'amplifyconfiguration.dart';
-
 import 'models/ModelProvider.dart';
 
 void main() {
